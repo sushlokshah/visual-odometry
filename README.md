@@ -1,5 +1,7 @@
 # visual-odometry
 motion estimation of agent using camera images
+# types
+![](https://i.imgur.com/tPw4AFV.png)
 
 * **Odometry**  - Use of data from motion sensors( eg. wheel rotation) / images to estimate change in position over time i.e trajectory .
 * **Visual odometry (VO)**- When this is done with the aid of Visual data i.e Images / Video to estimate the egomotion of camera
