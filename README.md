@@ -1,7 +1,11 @@
 # visual-odometry
-motion estimation of agent using camera images
-# types
-![](https://i.imgur.com/tPw4AFV.png)
+## Introduction:
+Visual odometry(VO) is the process of determining the position and orientation of a robot by analyzing the associated camera images. The project is designed to estimate the motion of calibrated camera mounted over a mobile platform. Motion is estimated by computing the feature points of the image and determining the relative translation and rotation of the images.
+## Visual odometry pipeline: 
+1 Image sequences  
+2 Feature Detection  
+3 Feature Matching (or Tracking)  
+4 Motion Estimation (2-D-to-2-D 3-D-to-3-D 3-D-to-2-D)  
 
 * **Odometry**  - Use of data from motion sensors( eg. wheel rotation) / images to estimate change in position over time i.e trajectory .
 * **Visual odometry (VO)**- When this is done with the aid of Visual data i.e Images / Video to estimate the egomotion of camera
