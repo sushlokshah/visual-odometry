@@ -15,7 +15,6 @@ Visual odometry(VO) is the process of determining the position and orientation o
 * 2D-2D Motion Estimation using Feature matching method. 
 * 2D-2D Motion Estimation using Optical Flow Method.
 * 3D-2D Motion estimation using Optical Flow method. 
-* 3D-3D Motion Estimation using Feature matching method.
 
 ### 2D-2D Motion Estimation(Feature matching): 
 * #### Approach:
