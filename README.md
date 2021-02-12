@@ -27,17 +27,18 @@ Visual odometry(VO) is the process of determining the position and orientation o
     6) Repeat the process and compute point cloud for the next corresponding image pair.
     7) Relative scale was computed by taking the mean of distances between the consecutive points clouds obtained from keypoint matching of subsequent images and rescale translation accordingly.
     8) Concatenate transformation and repeat the process.
-    9) [2D-2D Feature Matching Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/monocular%20VO/with_scale.ipynb)
+    9) [2D-2D Feature Matching Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/2d-2d/with_scale.ipynb)
 * #### reference paper :[2D-2D Feature Matching](https://drive.google.com/file/d/1FGDgzE0CN-P2I2N30kh47rz9LcyGHBB-/view?usp=sharing)
 * #### problems: 
     * slow computation due to feature matching and more computation complexity due to sift feature extraction method and slow brute force matching 
 
 * #### remedy:
     * use feature tracking methods instead of feature matching and using fast feature extranction method which we used in the next Approch 2D-2D Motion Estimation(Feature tracking)
-    * [2D-2D Feature tracking Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/monocular%20VO/with_scale.ipynb)
+    * [2D-2D Feature tracking Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/2d-2d/optical2.ipynb)
 
 * #### Result:
-
+![](https://i.imgur.com/Bvln8Zn.png)
+![](https://i.imgur.com/ILq5pMi.png)
 
 ### 2D-2D Motion Estimation(Feature tracking):
 * #### Approach:
@@ -47,10 +48,13 @@ Visual odometry(VO) is the process of determining the position and orientation o
     3) Calculate tracked features calculate essential, rotation matrix, translation matrix, and relative scale between images as explained above.
     4) Track features in the next frames and concatenates transformation.
     5) Update the reference frame when a sufficient number of features were not tracked and repeat the process.
-    6) [2D-2D Feature tracking Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/monocular%20VO/with_scale.ipynb)
+    6) [2D-2D Feature tracking Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/2d-2d/optical2.ipynb)
 
-* #### Result:
-
+* #### Result for different datasets:
+![](https://i.imgur.com/SQ34ZrT.png)
+![](https://i.imgur.com/GFIJ91Z.png)
+![](https://i.imgur.com/GdnULSz.png)
+![](https://i.imgur.com/uRerTCw.png)
 * #### improvements: 
     * improvements in **time and space complexity** of the code with considerable improvement in **frame processing rate**.
 
@@ -62,12 +66,11 @@ Visual odometry(VO) is the process of determining the position and orientation o
     3. untill the reprojection error between reprojected 3d point and current frame is greater than some threshold motion is estimated using EPNP.
     4. else the reference frame is changed from I1 to Ir where r < n(current frame age).
     5. this process is repeated.
-    6. [3D-2D implementation code](https://github.com/sushlokshah/visual-odometry/blob/main/monocular%20VO/with_scale.ipynb)
+    6. [3D-2D implementation code](https://github.com/sushlokshah/visual-odometry/blob/main/3d-2d/final_pnp.ipynb)
 
 * #### Result:
+![](https://i.imgur.com/Hg1WeSS.png)
 
 
 ### 3D-2D Motion Estimation with multiframe tracking approch:
-* #### [reference paper](https://)
-* problem with above approches implemented was that the reprojection error was continuously goes on increasing with no of frames and the there was no relation between the reprojection error of all previous frames with the current frame which resulted in the accumulation of error in translation and rotation estimation.
-
+* #### [reference paper](https://drive.google.com/file/d/1bUY6J3cVjFasmzbn-B5wp4dWOq0SxHR-/view?usp=sharing)
