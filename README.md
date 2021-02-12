@@ -28,7 +28,7 @@ Visual odometry(VO) is the process of determining the position and orientation o
     7) Relative scale was computed by taking the mean of distances between the consecutive points clouds obtained from keypoint matching of subsequent images and rescale translation accordingly.
     8) Concatenate transformation and repeat the process.
     9) [2D-2D Feature Matching Approch code](https://github.com/sushlokshah/visual-odometry/blob/main/monocular%20VO/with_scale.ipynb)
-* #### reference paper :[2D-2D Feature Matching](https://github.com/sushlokshah/visual-odometry/blob/main/monocular%20VO/with_scale.ipynb)
+* #### reference paper :[2D-2D Feature Matching](https://drive.google.com/file/d/1FGDgzE0CN-P2I2N30kh47rz9LcyGHBB-/view?usp=sharing)
 * #### problems: 
     * slow computation due to feature matching and more computation complexity due to sift feature extraction method and slow brute force matching 
 
